@@ -8,7 +8,11 @@
 
 
 ## 1). COMMON ROUTES (Common Routes Can be used without any token HTTPBearer (http, Bearer)):
-    
+
+* **method:  get** --> **/search_by_name/{name}** --> returns list of movie from database by given name and no authentication Required for this route.
+
+* **method:  get** --> **/search_movies_by_genre/{genre}** --> return movies from database by given genre and no authentication Required for this route.
+
 * **method:  get** --> **/genres** --> returns all genres listed in database and no authentication Required for this route.
     
 * **method: get** --> **/movies** --> returns all movies listed in database and no authentication Required for this route.
