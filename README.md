@@ -8,33 +8,33 @@ verified admin password (or super user) --> 9410197255
 
 ## 1). COMMON ROUTES (Common Routes Can be used without any token HTTPBearer (http, Bearer)):
 
-* method: get --> **/search_by_name/{name}**---> return movie from database by given name and no authentication Required for this route.
+* **method: get** --> **/search_by_name/{name}**---> return movie from database by given name and no authentication Required for this route.
     
-* method:  get --> **/search_movies_by_genre/{genre}** ---> return movies from database by given genre and no authentication Required for this route.
+* **method:  get** --> **/search_movies_by_genre/{genre}** ---> return movies from database by given genre and no authentication Required for this route.
     
-* method:  get --> **/genres** --> returns all genres listed in database and no authentication Required for this route.
+* **method:  get** --> **/genres** --> returns all genres listed in database and no authentication Required for this route.
     
-* method: get --> **/movies** --> returns all movies listed in database and no authentication Required for this route.
+* **method: get** --> **/movies** --> returns all movies listed in database and no authentication Required for this route.
     
-* method: post --> **/login** --> return HTTPBearer token for protected route. 
+* **method: post** --> **/login** --> return HTTPBearer token for protected route. 
 * example for login requestbody (all fields are required)--->**{
                                                      "email": "nitinuniyal21@gmail.com",
                                                       "password": "9410197255"
                                                       }**
                                                       
-* method :post -->**/signup** --> for creating account and return  HTTPBearer token for protected route.
-* example for signup requestbody (all fields are required)--->{
+* **method :post** -->**/signup** --> for creating account and return  HTTPBearer token for protected route.
+* example for signup requestbody (all fields are required)--->**{
                                                     "name": "shubnam",
                                                    "email": "shubham21@gmail.com",
                                                     "password": "9410197255",
                                                     "role": "user"
-                                                      }
+                                                      }**
                    
     
 
 ## 2).Protected Routes (needs authorizations by setting HTTPBearer (http, Bearer)):
 
-* method: post --> **/add_movie** ----> Route for adding movie to database. ***ONLY SUPER USER (or verified admin)*** ARE AUTHORIZE FOR THIS ROUTE. authentication (***HTTPBearer token(http, Bearer) for authorizations***) Required for this route.
+* **method: post** --> **/add_movie** ----> Route for adding movie to database. ***ONLY SUPER USER (or verified admin)*** ARE AUTHORIZE FOR THIS ROUTE. authentication (***HTTPBearer token(http, Bearer) for authorizations***) Required for this route.
 * example for add_movie requestbody(all fields are **required**)  ----->**{
                                                            "popularity": 64,
                                                            "director": "J. Searle Dawley",
@@ -47,9 +47,9 @@ verified admin password (or super user) --> 9410197255
                                                             }**
                                     
     
-* method: post --> **/toggle_favourites/{movie_id}** ---> Route for toggling movie ( (if movie already in favourites -->then remove movie from favourite) and (if movie not in favourites -->then add movie to favourite) ). authentication (***HTTPBearer token(http, Bearer) for authorizations***) Required for this route.
+* **method: post** --> **/toggle_favourites/{movie_id}** ---> Route for toggling movie ( (if movie already in favourites -->then remove movie from favourite) and (if movie not in favourites -->then add movie to favourite) ). authentication (***HTTPBearer token(http, Bearer) for authorizations***) Required for this route.
      
-* method: get --> **/favourites_list** ---> Route returning list of favourites. authentication (***HTTPBearer token(http, Bearer) for authorizations***) Required for this route.
+* **method: get** --> **/favourites_list** ---> Route returning list of favourites. authentication (***HTTPBearer token(http, Bearer) for authorizations***) Required for this route.
     
     
     
