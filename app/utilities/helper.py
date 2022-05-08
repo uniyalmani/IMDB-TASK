@@ -59,8 +59,10 @@ def decode_token(token):
     try:
         env = os.environ
         data = jwt.decode(token, env.get("SECRET_KEY"), algorithms=["HS256"])
+        print(data, "//////////////////")
         return data
     except Exception as e:
+        print()
         return False
 
 
@@ -77,11 +79,11 @@ def validate_token_expiry(token_expiry_datetime):
 def is_valid_token(token):
     """validating token if exist """
     if token:
-        decoded_data = decode_token(token)
+        decoded_data = decode_token(token) 
         if decoded_data:
             expire_at = json.loads(decoded_data["expire_at"])["to_encode"]
             valid_token = validate_token_expiry(expire_at)
             decoded_data["valid_token"] = valid_token
             return decoded_data
-        decoded_data["valid_token"] = False
+
     return None

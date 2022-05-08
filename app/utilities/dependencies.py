@@ -2,11 +2,16 @@ from fastapi import Request
 from sqlmodel import Session
 from .helper import is_valid_token
 from app.controllers.database_initializer import engine
+from fastapi import APIRouter, Depends, Request, Response, HTTPException, Security
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+security = HTTPBearer()
 
-
-def get_decoded_token_data(request: Request):
+def get_decoded_token_data(credentials):
     """return token data with key valid_token for validation"""
-    auth_token = request.cookies.get("auth-token")
+
+    print("***************")
+    auth_token =   credentials.credentials
+    print(auth_token, "********************")
     decoded_data = is_valid_token(auth_token)
     return decoded_data
 
