@@ -54,11 +54,11 @@ verified admin password (or super user) --> 9410197255
     
     
     
-***3). for pytest commands:***
+***3). for running pytest -->commands:***
 * **docker exec -it mysql_db bash** #this command will open terminal of container ;
 * **mysql -u root -pfynd123;** #this command opens mysql in terminal
 * **GRANT ALL PRIVILEGES ON *.* TO 'fynd_acad'@'%'**; # this commands give all the permissions to user fynd_acad for droping and creating another              dummy database for testing;
-* **sh tests.sh** # run ths command in local terminal for ri=unning pytest
+* **sh tests.sh** # run ths command in local terminal for running pytest
     
     
     
