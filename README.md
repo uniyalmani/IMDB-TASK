@@ -2,6 +2,9 @@
 
 hosted swagger ui link for testing -> https://protected-gorge-43739.herokuapp.com/documentation
 
+verified admin email (or super user) -> ashutoshumiyal21@gmail.com
+verified admin password (or super user) --> 9410197255
+
 
 common routes (Common Routes Can be used without any token HTTPBearer (http, Bearer)):
 
@@ -52,10 +55,10 @@ Protected Routes (needs authorizations by setting HTTPBearer (http, Bearer)):
     
     
 for pytest commands:
-    1) docker exec -it mysql_db bash #this command will open terminal of container ;
-    2) mysql -u root -pfynd123; #this command opens mysql in terminal
-    3) GRANT ALL PRIVILEGES ON *.* TO 'fynd_acad'@'%'; # this commands give all the permissions to user fynd_acad for droping and creating another dummy database for testing;
-    4) sh tests.sh # run ths command in local terminal for ri=unning pytest
+        1) docker exec -it mysql_db bash #this command will open terminal of container ;
+        2) mysql -u root -pfynd123; #this command opens mysql in terminal
+        3) GRANT ALL PRIVILEGES ON *.* TO 'fynd_acad'@'%'; # this commands give all the permissions to user fynd_acad for droping and creating another              dummy database for testing;
+        4) sh tests.sh # run ths command in local terminal for ri=unning pytest
     
     
     
