@@ -6,7 +6,7 @@ verified admin email (or super user) -> ashutoshumiyal21@gmail.com
 verified admin password (or super user) --> 9410197255
 
 
-# 1). common routes (Common Routes Can be used without any token HTTPBearer (http, Bearer)):***
+## 1). COMMON ROUTES (Common Routes Can be used without any token HTTPBearer (http, Bearer)):
 
 * method: get --> /search_by_name/{name} ---> return movie from database by given name and no authentication Required for this route.
     
@@ -32,7 +32,7 @@ verified admin password (or super user) --> 9410197255
                    
     
 
-***2).Protected Routes (needs authorizations by setting HTTPBearer (http, Bearer)):***
+## 2).Protected Routes (needs authorizations by setting HTTPBearer (http, Bearer)):
 
 * method: post --> /add_movie ----> Route for adding movie to database. ONLY SUPER USER (or verified admin) ARE AUTHORIZE FOR THIS ROUTE. authentication (HTTPBearer (http, Bearer) for authorizations) Required for this route.
 * example for add_movie requestbody(all fields are required)  ----->{
@@ -54,7 +54,7 @@ verified admin password (or super user) --> 9410197255
     
     
     
-***3). for running pytest -->commands:***
+## 3) for running pytest -->commands:
 * **docker exec -it mysql_db bash** #this command will open terminal of container ;
 * **mysql -u root -pfynd123;** #this command opens mysql in terminal
 * **GRANT ALL PRIVILEGES ON *.* TO 'fynd_acad'@'%'**; # this commands give all the permissions to user fynd_acad for droping and creating another              dummy database for testing;
