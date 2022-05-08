@@ -6,7 +6,7 @@ verified admin email (or super user) -> ashutoshumiyal21@gmail.com
 verified admin password (or super user) --> 9410197255
 
 
-***# 1). common routes (Common Routes Can be used without any token HTTPBearer (http, Bearer)):***
+# 1). common routes (Common Routes Can be used without any token HTTPBearer (http, Bearer)):***
 
 * method: get --> /search_by_name/{name} ---> return movie from database by given name and no authentication Required for this route.
     
