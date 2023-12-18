@@ -19,6 +19,7 @@ services:
   app:
     build:
       context: .
+      container_name: app
       dockerfile: Dockerfile
     environment:
       - SECRET_KEY="qwertyuiopasdfghjklzxcvbnmgenratedfjsdfjs"
@@ -38,13 +39,4 @@ services:
       - "8000:8000"
       - "5678:5678"
 
-  test:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    environment:
-      - DATABASE_URL=sqlite:///usr/src/app/test.db
-    volumes:
-      - .:/usr/src/app
-    depends_on:
-      - app
+  
