@@ -43,7 +43,16 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Wait for MySQL to be ready
-      run: dockerize -wait tcp://localhost:3305 -timeout 1m
+      run: |
+        timeout=60
+        while ! nc -z localhost 3305 && [ $timeout -gt 0 ]; do
+          sleep 1
+          timeout=$((timeout-1))
+        done
+        if [ $timeout -eq 0 ]; then
+          echo "MySQL not ready within the timeout."
+          exit 1
+        fi
 
     - name: Run tests inside the test container
       run: docker-compose run test pytest
