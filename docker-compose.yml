@@ -19,7 +19,6 @@ services:
   app:
     build:
       context: .
-      container_name: app
       dockerfile: Dockerfile
     environment:
       - SECRET_KEY="qwertyuiopasdfghjklzxcvbnmgenratedfjsdfjs"
