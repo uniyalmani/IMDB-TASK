@@ -1,6 +1,6 @@
 # IMDB-TASK
 
-* hosted swagger ui link for testing : **https://protected-gorge-43739.herokuapp.com/documentation**
+
 
 * verified admin email (or super user) : **ashutoshumiyal21@gmail.com**
 
